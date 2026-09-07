@@ -50,12 +50,14 @@
 
 ## 🐾 已上架的 Codex 宠物
 
-先来看看已经上传的两个小伙伴：
+先来看看已经上传的两个小伙伴。每个项目同时保留在本仓库的轻量安装目录，并链接到作者维护的完整项目仓库：
 
-| 宠物 | 简介 | 文件 |
-| --- | --- | --- |
-| [月薪喵](projects/yuexinmiao/) | 黄白配色、轻巧活泼的小猫 | `pet.json` + `spritesheet.webp` |
-| [呆猫八条](projects/daimaobatiao/) | 灰白配色、大号黄环眼睛的贴纸猫 | `pet.json` + `spritesheet.webp` |
+| 宠物 | 作者 | 本库目录 | 完整项目仓库 | 可安装包 |
+| --- | --- | --- | --- | --- |
+| 月薪喵 | WenNinghan | [项目目录](projects/WenNinghan/yuexinmiao/) | [yuexinmiao-codex-pet](https://github.com/WenNinghan/yuexinmiao-codex-pet) | [dist/yuexinmiao](https://github.com/WenNinghan/yuexinmiao-codex-pet/tree/main/dist/yuexinmiao) |
+| 呆猫八条 | WenNinghan | [项目目录](projects/WenNinghan/daimaobatiao/) | [daimaobatiao-codex-pet](https://github.com/WenNinghan/daimaobatiao-codex-pet) | [dist/daimaobatiao](https://github.com/WenNinghan/daimaobatiao-codex-pet/tree/main/dist/daimaobatiao) |
+
+本仓库中的目录适合快速浏览和安装；完整项目仓库包含源文件、预览、验证报告和构建/发布资料。
 
 如果你也做过 Codex 宠物、桌面小工具、网页 Demo 或其他有趣作品，欢迎用同样的方式上传。
 
@@ -118,7 +120,8 @@ git push origin main
 
 ```text
 projects/
-└── your-project-name/
+└── 你的 GitHub 用户名/
+    └── your-project-name/
     ├── README.md              # 项目说明，建议必须有
     ├── src/                   # 源代码
     ├── assets/                # 图片、演示素材
