@@ -48,6 +48,17 @@
 
 项目可以是个人完成，也可以是小组合作；可以已经完成，也可以仍在持续更新。
 
+## 🐾 已上架的 Codex 宠物
+
+先来看看已经上传的两个小伙伴：
+
+| 宠物 | 简介 | 文件 |
+| --- | --- | --- |
+| [月薪喵](projects/yuexinmiao/) | 黄白配色、轻巧活泼的小猫 | `pet.json` + `spritesheet.webp` |
+| [呆猫八条](projects/daimaobatiao/) | 灰白配色、大号黄环眼睛的贴纸猫 | `pet.json` + `spritesheet.webp` |
+
+如果你也做过 Codex 宠物、桌面小工具、网页 Demo 或其他有趣作品，欢迎用同样的方式上传。
+
 ## 🧭 最短上架路径
 
 ```mermaid
