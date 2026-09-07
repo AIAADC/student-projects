@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+*.tsbuildinfo
+
+# vite
+.vite/
+apps/web/dist/
+
+# env files(真实 .env* 不提交,模板用 .env.example)
+.env
+.env.*
+!.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# test coverage
+coverage/
+
+# 沙箱假 home:无人值守期间所有写操作的落点(store-and-paths-v0.md §5)
+.sandbox/
+
+# OS / editor
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+{
+  "name": "@skills-hub/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "skill-hub 命令行:确定性内核的终端入口",
+  "type": "module",
+  "bin": {
+    "skills-hub": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "self-skill"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --force",
+    "test": "tsc -b && vitest run",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^3.0.35",
+    "@hono/node-server": "^2.1.1",
+    "@skills-hub/core": "workspace:^",
+    "ai": "^7.0.77",
+    "citty": "^0.2.2",
+    "hono": "^4.13.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.12",
+    "vitest": "^4.1.10"
+  }
+}
