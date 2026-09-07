@@ -7,6 +7,7 @@
 | WenNinghan | [AI 前沿情报站](ai-frontier-intel-station-WenNinghan/) | [项目仓库目录](ai-frontier-intel-station-WenNinghan/README.md) | [在线网站](https://64bb5c06830a424fbb1b8c08fc95824e.app.workbuddy.link) |
 | WenNinghan | [月薪喵](yuexinmiao-WenNinghan/) | [项目 README](yuexinmiao-WenNinghan/README.md) | — |
 | WenNinghan | [呆猫八条](daimaobatiao-WenNinghan/) | [项目 README](daimaobatiao-WenNinghan/README.md) | — |
+| AIMFllyYS | [期末复习工作站](notebook-medfreshman-AIMFllyYS/) | [项目 README](notebook-medfreshman-AIMFllyYS/README.md) | [在线网站](https://notebook2a.husteread.icu) |
 
 ## 如何添加项目
 
