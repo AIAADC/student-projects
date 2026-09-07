@@ -1,0 +1,4 @@
+interface:
+  display_name: "国标 Word/PDF 文稿封装"
+  short_description: "按适用国标完成中文文稿排版、引用、图表与双格式验收"
+  default_prompt: "Use $gb-standard-docx-pdf to package this Chinese manuscript as a standards-aligned DOCX and matching PDF."
