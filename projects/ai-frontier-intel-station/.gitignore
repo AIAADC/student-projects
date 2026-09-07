@@ -1,0 +1,7 @@
+.lib_tmp/
+.env
+.env.*
+*.log
+__pycache__/
+*.pyc
+.DS_Store
