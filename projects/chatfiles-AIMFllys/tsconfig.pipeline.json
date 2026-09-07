@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023"],
+    "types": ["node"]
+  },
+  "include": [
+    "pipeline/**/*.ts",
+    "scripts/**/*.ts",
+    "shared/**/*.ts"
+  ],
+  "exclude": ["scripts/e2e/**/*.ts"]
+}

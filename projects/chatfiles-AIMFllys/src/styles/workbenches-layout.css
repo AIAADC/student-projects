@@ -1,0 +1,24 @@
+.clue-workbench {
+  grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+  height: calc(100vh - 200px);
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.media-review,
+.database-workbench,
+.value-workbench,
+.chat-synthesis {
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  height: calc(100vh - 200px);
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.clue-workbench > *,
+.media-review > *,
+.database-workbench > *,
+.value-workbench > *,
+.chat-synthesis > * {
+  min-height: 0;
+}

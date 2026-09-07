@@ -1,0 +1,158 @@
+.value-reasons div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.value-reasons span {
+  padding: 6px 10px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--bg-2);
+  color: var(--gold-2);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.synthesis-sidebar {
+  padding: 12px;
+}
+
+.synthesis-section-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.synthesis-section-list button {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  font-weight: 700;
+}
+
+.synthesis-section-list button:hover,
+.synthesis-section-list button.active {
+  border-color: var(--accent-32);
+  background: var(--accent-08);
+}
+
+.synthesis-section-list span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--rust);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.synthesis-reader {
+  padding: 18px;
+}
+
+.synthesis-reader > header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.synthesis-reader h2 {
+  font-family: var(--display);
+  font-size: 26px;
+}
+
+.synthesis-reader > header p:last-child {
+  max-width: 880px;
+  margin-top: 8px;
+  color: var(--ink-mute);
+  line-height: 1.65;
+}
+
+.synthesis-items {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.synthesis-card {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+}
+
+.synthesis-card.high {
+  border-left: 4px solid var(--rust);
+}
+
+.synthesis-card.medium {
+  border-left: 4px solid var(--gold);
+}
+
+.synthesis-card.low {
+  border-left: 4px solid var(--ink-mute);
+}
+
+.synthesis-card h3 {
+  overflow-wrap: anywhere;
+  font-family: var(--display);
+  font-size: 18px;
+}
+
+.synthesis-card div:first-child span {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.synthesis-card p {
+  margin-top: 10px;
+  color: var(--ink-mute);
+  line-height: 1.65;
+}
+
+.synthesis-card .synthesis-next {
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+
+.synthesis-card code {
+  display: block;
+  margin-top: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.synthesis-excerpts {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.synthesis-excerpts blockquote {
+  margin: 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--gold);
+  background: var(--bg-2);
+  color: var(--ink-soft);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}

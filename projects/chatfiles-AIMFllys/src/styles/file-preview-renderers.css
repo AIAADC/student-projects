@@ -1,0 +1,147 @@
+.audio-preview {
+  width: calc(100% - 48px);
+  margin: 32px 24px;
+}
+
+.pdf-preview {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.html-preview {
+  width: 100%;
+  min-height: 100%;
+  border: 0;
+  background: #fff;
+}
+
+.docx-host,
+.sheet-host,
+.markdown-body,
+.code-preview,
+.zip-preview,
+.pptx-preview,
+.database-preview,
+.file-inspector,
+.voice-preview,
+.font-preview {
+  padding: 24px;
+}
+
+/* docx renders its own white page — give it a light surface */
+.docx-host {
+  background: #f3efe6;
+  color: #1b2523;
+}
+.docx-render {
+  margin: 0 auto;
+}
+
+.sheet-host {
+  color: var(--ink);
+}
+.sheet-host table {
+  min-width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-2);
+  font-size: 12px;
+}
+
+.sheet-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.sheet-toolbar span {
+  flex: 0 0 auto;
+  color: var(--ink-mute);
+  font-size: 12px;
+}
+
+.sheet-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
+.sheet-tabs button {
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--bg-3);
+  color: var(--ink-soft);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sheet-tabs button.active {
+  border-color: var(--accent-40);
+  color: var(--gold-2);
+  font-weight: 700;
+}
+
+.sheet-table-wrap {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+}
+
+.sheet-host td,
+.sheet-host th,
+.zip-preview td {
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+}
+
+.sheet-host th {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: 44px;
+  background: var(--bg-3);
+  color: var(--ink-mute);
+  font-weight: 700;
+  text-align: right;
+}
+
+.sheet-host td {
+  min-width: 120px;
+  max-width: 260px;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+  color: var(--ink-soft);
+}
+
+.sheet-host tr:first-child td,
+.sheet-host tr:first-child th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--bg-3);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.sheet-host tr:first-child th {
+  z-index: 5;
+}
+
+.sheet-note {
+  margin-top: 10px;
+  color: var(--ink-mute);
+  font-size: 12px;
+}

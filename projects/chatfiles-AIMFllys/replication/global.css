@@ -1,0 +1,157 @@
+/* =============================================================================
+   午夜书斋 / Midnight Study — ChatFiles 设计基座（drop-in）
+   -----------------------------------------------------------------------------
+   这是复刻者可直接放进 src/index.css 的「设计系统底座」：设计令牌(:root)、字体、
+   纸感颗粒、自定义滚动条、入场动画。审美方向是规格的一部分（见 docs/spec/08_frontend.md）。
+   复刻时可以换方向（羊皮纸学术风 / 赛博档案馆…），但务必真的用 frontend-design skill
+   先承诺一个自洽方向再写代码——这是质量分水岭。
+   ========================================================================== */
+
+/* 展示衬线 Fraunces + 正文 Hanken Grotesk + 等宽 JetBrains Mono */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap");
+
+:root {
+  /* —— 背景与分隔（暖深色，绝不用纯黑） —— */
+  --bg: #14110d;
+  --bg-2: #1b1712;
+  --bg-3: #221d17;
+  --line: #2e271f;
+  --line-2: #3a3127;
+
+  /* —— 文字三阶 —— */
+  --ink: #ece3d4;
+  --ink-soft: #b7ab97;
+  --ink-mute: #8a7e6c;
+
+  /* —— 点缀：金 / 玉 / 锈（金为主，玉锈为辅） —— */
+  --gold: #d8a24a;
+  --gold-2: #e9c079;
+  --jade: #79a99a;
+  --rust: #c0653a;
+
+  /* —— 形状与阴影 —— */
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 14px 34px -16px rgba(0, 0, 0, 0.65);
+
+  /* —— 字体族（正文必须追加 CJK 栈，否则中文回退难看） —— */
+  --cjk: "PingFang SC", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+  --display: "Fraunces", "PingFang SC", "Microsoft YaHei", "Source Han Sans CN", serif;
+  --body: "Hanken Grotesk", "PingFang SC", "Microsoft YaHei", "Source Han Sans CN", sans-serif;
+  --mono: "JetBrains Mono", "PingFang SC", "Microsoft YaHei", monospace;
+
+  color: var(--ink);
+  background: var(--bg);
+  font: 15px/1.6 var(--body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* 双径向暖光晕（金 + 玉），固定不随滚动 */
+body {
+  background:
+    radial-gradient(1200px 680px at 78% -8%, rgba(216, 162, 74, 0.07), transparent 60%),
+    radial-gradient(900px 620px at -6% 4%, rgba(121, 169, 154, 0.05), transparent 55%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--ink);
+}
+
+/* feTurbulence 纸感颗粒叠层（~3%），覆盖全屏不拦事件 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--mono);
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: rgba(216, 162, 74, 0.28);
+  color: var(--gold-2);
+}
+
+/* 细金线滚动条（Firefox + WebKit） */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) var(--bg);
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  border: 2px solid var(--bg);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #4a3f31;
+}
+
+/* 错峰淡入：板块入场用 animation-delay 叠加 */
+@keyframes ms-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

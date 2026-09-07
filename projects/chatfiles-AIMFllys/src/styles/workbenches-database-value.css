@@ -1,0 +1,233 @@
+.database-sidebar,
+.value-sidebar {
+  padding: 12px;
+}
+
+.database-list,
+.value-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.database-list button,
+.value-list button {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.database-list button:hover,
+.database-list button.active,
+.value-list button:hover,
+.value-list button.active {
+  border-color: var(--accent-32);
+  background: var(--accent-08);
+}
+
+.database-list strong,
+.database-list span,
+.database-list em,
+.value-list span,
+.value-list strong,
+.value-list em {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.database-list strong,
+.value-list strong {
+  font-size: 13px;
+  color: var(--ink);
+}
+.value-list strong {
+  margin-top: 4px;
+}
+
+.database-list span,
+.database-list em,
+.value-list em {
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.value-list span {
+  color: var(--rust);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.database-detail,
+.value-detail {
+  padding: 18px;
+}
+
+.database-detail > header,
+.value-detail > header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.database-detail h2,
+.value-detail h2 {
+  font-family: var(--display);
+  font-size: 25px;
+  overflow-wrap: anywhere;
+}
+
+.database-detail header span,
+.value-detail header span {
+  display: block;
+  margin-top: 6px;
+  color: var(--ink-mute);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.open-source-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+  color: var(--gold-2);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+.open-source-button:hover {
+  border-color: var(--accent-40);
+}
+
+.database-path {
+  margin: 14px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--ink-mute);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.database-boundary-grid,
+.value-score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.database-boundary-grid div,
+.value-score-grid div {
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+}
+
+.database-boundary-grid span,
+.value-score-grid span {
+  display: block;
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.database-boundary-grid strong,
+.value-score-grid strong {
+  display: block;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.database-verdict,
+.database-table-card,
+.value-reasons {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+}
+
+.database-verdict h3,
+.database-tables h3,
+.value-reasons h3 {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 15px;
+}
+
+.database-verdict p,
+.database-table-card p,
+.value-reasons p {
+  color: var(--ink-mute);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.database-tables {
+  margin-top: 16px;
+}
+
+.database-table-card > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.database-table-card strong {
+  color: var(--ink);
+}
+
+.database-table-card > div span {
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.database-table-card blockquote {
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--rust);
+  background: var(--bg-2);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.database-table-card blockquote span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink-mute);
+  font-size: 11px;
+  font-weight: 700;
+}

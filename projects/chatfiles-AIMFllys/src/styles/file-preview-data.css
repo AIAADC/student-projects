@@ -1,0 +1,246 @@
+.zip-preview {
+  color: var(--ink);
+}
+.zip-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-2);
+  table-layout: fixed;
+}
+
+.zip-preview td {
+  color: var(--ink-soft);
+}
+.zip-preview td:first-child {
+  overflow-wrap: anywhere;
+}
+
+.zip-preview td:last-child {
+  width: 110px;
+  color: var(--ink-mute);
+  text-align: right;
+}
+
+.pptx-preview {
+  color: var(--ink);
+}
+.pptx-preview section {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.pptx-preview p {
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.font-preview {
+  color: var(--ink);
+}
+.font-specimen {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.font-line {
+  margin: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.font-line.xl {
+  font-size: 42px;
+}
+.font-line.lg {
+  font-size: 30px;
+}
+.font-line.md {
+  font-size: 20px;
+}
+.font-line.sm {
+  font-size: 14px;
+}
+
+.db-status,
+.archive-status {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.db-status.readable svg,
+.archive-status.readable svg {
+  color: var(--jade);
+}
+
+.db-status.blocked svg,
+.archive-status.blocked svg {
+  color: var(--rust);
+}
+
+.db-status strong,
+.archive-status strong,
+.db-header strong,
+.db-table-list strong {
+  display: block;
+  color: var(--ink);
+}
+
+.db-status span,
+.archive-status span,
+.db-table-list span {
+  display: block;
+  margin-top: 5px;
+  color: var(--ink-mute);
+  font-size: 13px;
+}
+
+.db-status p,
+.archive-status p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.entry-kind {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--success-16);
+  color: var(--jade);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.db-header {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.db-header code {
+  display: block;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  color: var(--gold);
+}
+
+.db-table-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.db-table-list section {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.db-table-list header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.db-table-list table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.db-table-list td {
+  border-bottom: 1px solid var(--line);
+  padding: 7px 10px;
+  overflow-wrap: anywhere;
+  color: var(--ink-soft);
+}
+
+.db-table-list td:last-child {
+  width: 34%;
+  color: var(--ink-mute);
+}
+
+.inspector-strings {
+  overflow: hidden;
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.inspector-strings header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.inspector-strings article {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.inspector-strings article:last-child {
+  border-bottom: 0;
+}
+
+.inspector-strings span,
+.muted-note {
+  color: var(--ink-mute);
+  font-size: 13px;
+}
+
+.inspector-strings p {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.voice-preview {
+  color: var(--ink);
+}
+.voice-card {
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-2);
+}
+
+.voice-card audio {
+  width: 100%;
+}
+
+.code-preview {
+  min-height: 100%;
+  margin: 0;
+  overflow: auto;
+  color: var(--ink-soft);
+  background: var(--bg);
+  white-space: pre-wrap;
+}
