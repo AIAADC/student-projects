@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1A73E8">
+<title>WebShell 夹具 · SPA</title>
+<style>
+  :root {
+    /* 壳引擎注入的 insets 变量（env() 在 WebView 恒为 0，由原生写入） */
+    --ws-safe-top: 0px; --ws-safe-bottom: 0px; --ws-safe-left: 0px; --ws-safe-right: 0px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: sans-serif;
+    background: linear-gradient(180deg, #e8f0fe 0%, #ffffff 40%);
+    min-height: 100vh;
+  }
+  header {
+    position: sticky; top: 0;
+    padding: 12px 16px;
+    padding-top: calc(var(--ws-safe-top) + 12px);
+    background: #1A73E8; color: #fff;
+  }
+  h1 { font-size: 20px; }
+  main { padding: 16px; }
+  .card {
+    background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+  }
+  button {
+    display: block; width: 100%; margin: 8px 0; padding: 14px;
+    border: none; border-radius: 10px; background: #e8f0fe; color: #1A73E8;
+    font-size: 16px;
+  }
+  .debug { font-family: monospace; font-size: 12px; color: #555; word-break: break-all; }
+</style>
+</head>
+<body>
+<header><h1 id="pageTitle">夹具 · 第 1 页</h1></header>
+<main>
+  <div class="card">
+    <p>验证点：①经 WebViewAssetLoader 以 https 源加载 ②document-start 注入生效 ③safe-area CSS 变量为原生真实值 ④SPA pushState 后返回键可用</p>
+  </div>
+  <div class="card">
+    <div class="debug" id="originInfo"></div>
+    <div class="debug" id="insetInfo"></div>
+    <div class="debug" id="bootInfo"></div>
+  </div>
+  <div class="card">
+    <button onclick="nav(2)">进入第 2 页（pushState）</button>
+    <button onclick="nav(3)">进入第 3 页（pushState）</button>
+    <button onclick="history.back()">history.back()</button>
+  </div>
+</main>
+<script>
+  document.getElementById('originInfo').textContent = 'origin: ' + location.origin;
+  document.getElementById('bootInfo').textContent =
+    'document-start 注入: ' + (window.__wsBoot ? '生效 t=' + window.__wsBoot.t : '未生效');
+  function readInsets() {
+    const s = getComputedStyle(document.documentElement);
+    document.getElementById('insetInfo').textContent =
+      'safe-top=' + s.getPropertyValue('--ws-safe-top').trim() +
+      ' safe-bottom=' + s.getPropertyValue('--ws-safe-bottom').trim();
+  }
+  function render() {
+    const page = (location.hash || '#p1').replace('#p', '') || '1';
+    document.getElementById('pageTitle').textContent = '夹具 · 第 ' + page + ' 页';
+  }
+  function nav(n) { location.hash = '#p' + n; }
+  window.addEventListener('hashchange', render);
+  window.addEventListener('resize', readInsets);
+  render(); readInsets(); setTimeout(readInsets, 300);
+</script>
+</body>
+</html>

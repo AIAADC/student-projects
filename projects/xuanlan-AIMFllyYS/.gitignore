@@ -1,0 +1,30 @@
+*.iml
+.gradle
+.kotlin/
+/local.properties
+/.idea
+.DS_Store
+.zcode/
+/build
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Release signing material must never enter source control.
+*.jks
+*.keystore
+*.p12
+*.pem.key
+signing.properties
+release-signing.properties
+.secrets/
+
+# Locally generated release artifacts are uploaded to GitHub Releases.
+/dist/
+
+# IDE / temporary scratch directories
+/.trae/
+/.tmp/
+/build-alt/

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 玄览图标前景：太极环为体，星轨环绕，星核居中，伴星循行 —— 契合天道周行不殆 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.62"
+        android:scaleY="0.62"
+        android:pivotX="54"
+        android:pivotY="54">
+        <!-- 太极环（月白） -->
+        <path
+            android:pathData="M54,24 a30,30 0 1,0 0.002,0 Z"
+            android:fillColor="#00000000"
+            android:strokeColor="#F2EEE3"
+            android:strokeWidth="5"
+            android:strokeLineCap="round" />
+        <!-- 星核（鎏金） -->
+        <path
+            android:fillColor="#E9D9AE"
+            android:pathData="M54,47 a7,7 0 1,0 0.002,0 Z" />
+        <!-- 环绕星轨 + 伴星（整体倾斜） -->
+        <group
+            android:rotation="-28"
+            android:pivotX="54"
+            android:pivotY="54">
+            <path
+                android:pathData="M10,54 a44,15 0 1,0 88,0 a44,15 0 1,0 -88,0"
+                android:fillColor="#00000000"
+                android:strokeColor="#C9A86A"
+                android:strokeWidth="3"
+                android:strokeLineCap="round" />
+            <path
+                android:fillColor="#E9D9AE"
+                android:pathData="M98,54 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" />
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="catalog_title">设计 Playbook</string>
+    <string name="catalog_intro">%1$d 个真实组件场景。示例独立运行，不读取、修改站点数据。</string>
+    <string name="catalog_reset">重置</string>
+    <string name="catalog_search">搜索组件名称或 ID</string>
+    <string name="catalog_foundations">基础规范</string>
+    <string name="catalog_navigation">导航与按钮</string>
+    <string name="catalog_forms">表单与选择</string>
+    <string name="catalog_content">列表与反馈</string>
+    <string name="catalog_overlays">菜单与弹窗</string>
+    <string name="catalog_home">桌面</string>
+    <string name="catalog_browser">浏览器</string>
+    <string name="catalog_developer">设置与开发者</string>
+    <string name="catalog_dock">主栏目导航</string>
+    <string name="catalog_dock_description">与实际 Dock 共用按钮内容；点击切换四个栏目状态。</string>
+    <string name="catalog_browser_dock">玻璃小球与侧边召回</string>
+    <string name="catalog_browser_dock_description">实际浏览导航宿主：收起、拖动、贴边、点击恢复。此处仅挂载一个实时玻璃层。</string>
+    <string name="catalog_collapse">收起导航</string>
+</resources>

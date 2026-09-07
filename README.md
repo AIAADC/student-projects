@@ -25,6 +25,7 @@
 
 - [项目总目录](projects/README.md)
 - [AI 前沿情报站 · WenNinghan](projects/ai-frontier-intel-station-WenNinghan/)
+- [玄览 · AIMFllyYS](projects/xuanlan-AIMFllyYS/)
 
 ---
 

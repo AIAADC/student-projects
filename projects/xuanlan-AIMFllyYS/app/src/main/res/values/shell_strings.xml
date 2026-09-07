@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="site_shell_opening">正在打开</string>
+    <string name="site_shell_opening_hint">正在读取网页应用设置。</string>
+    <string name="site_shell_unavailable">无法打开网页应用</string>
+    <string name="site_shell_unavailable_hint">此应用可能已被移除，或网址不受支持。可返回主页检查设置后重试。</string>
+    <string name="site_shell_retry">重试</string>
+</resources>
