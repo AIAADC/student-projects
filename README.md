@@ -24,7 +24,7 @@
 所有项目按“作者-项目名”建立独立目录，方便快速找到作者、项目说明和演示地址：
 
 - [项目总目录](projects/README.md)
-- [WenNinghan · AI 前沿情报站](projects/WenNinghan/ai-frontier-intel-station/)
+- [AI 前沿情报站 · WenNinghan](projects/ai-frontier-intel-station-WenNinghan/)
 
 ---
 
@@ -61,8 +61,8 @@
 
 | 宠物 | 作者 | 本库目录 | 完整项目仓库 | 可安装包 |
 | --- | --- | --- | --- | --- |
-| 月薪喵 | WenNinghan | [项目目录](projects/WenNinghan/yuexinmiao/) | [yuexinmiao-codex-pet](https://github.com/WenNinghan/yuexinmiao-codex-pet) | [dist/yuexinmiao](https://github.com/WenNinghan/yuexinmiao-codex-pet/tree/main/dist/yuexinmiao) |
-| 呆猫八条 | WenNinghan | [项目目录](projects/WenNinghan/daimaobatiao/) | [daimaobatiao-codex-pet](https://github.com/WenNinghan/daimaobatiao-codex-pet) | [dist/daimaobatiao](https://github.com/WenNinghan/daimaobatiao-codex-pet/tree/main/dist/daimaobatiao) |
+| 月薪喵 | WenNinghan | [项目目录](projects/yuexinmiao-WenNinghan/) | [yuexinmiao-codex-pet](https://github.com/WenNinghan/yuexinmiao-codex-pet) | [dist/yuexinmiao](https://github.com/WenNinghan/yuexinmiao-codex-pet/tree/main/dist/yuexinmiao) |
+| 呆猫八条 | WenNinghan | [项目目录](projects/daimaobatiao-WenNinghan/) | [daimaobatiao-codex-pet](https://github.com/WenNinghan/daimaobatiao-codex-pet) | [dist/daimaobatiao](https://github.com/WenNinghan/daimaobatiao-codex-pet/tree/main/dist/daimaobatiao) |
 
 本仓库中的目录适合快速浏览和安装；完整项目仓库包含源文件、预览、验证报告和构建/发布资料。
 
@@ -93,7 +93,7 @@ flowchart LR
 3. 在自己的仓库中点击 **Add file → Create new file**。
 4. 在文件名中直接填写：
 
-   `projects/你的项目名/README.md`
+   `projects/项目名-你的GitHub用户名/README.md`
 
    GitHub 会自动创建文件夹。
 5. 把下面的项目模板复制进去，替换其中的占位内容。
@@ -127,8 +127,7 @@ git push origin main
 
 ```text
 projects/
-└── 你的 GitHub 用户名/
-    └── your-project-name/
+└── 项目名-你的GitHub用户名/
     ├── README.md              # 项目说明，建议必须有
     ├── src/                   # 源代码
     ├── assets/                # 图片、演示素材
@@ -145,7 +144,7 @@ projects/
 
 ## ✍️ 项目 README 模板
 
-复制下面的内容，放进 `projects/你的项目名/README.md`：
+复制下面的内容，放进 `projects/项目名-你的GitHub用户名/README.md`：
 
 ```markdown
 # 项目名称
@@ -199,7 +198,7 @@ projects/
 
 提交 Pull Request 前，快速检查一下：
 
-- [ ] 项目放在 `projects/项目名/` 独立目录中
+- [ ] 项目放在 `projects/项目名-作者名/` 独立目录中
 - [ ] 项目有基本说明
 - [ ] 已写明作者或参与者
 - [ ] 已说明运行方式，或注明“暂未整理运行方式”

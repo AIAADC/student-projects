@@ -7,7 +7,7 @@
 ## 项目信息
 
 - 作者：WenNinghan（GitHub 用户名）
-- GitHub：<https://github.com/AIAADC/student-projects/tree/main/projects/WenNinghan/ai-frontier-intel-station>
+- GitHub：<https://github.com/AIAADC/student-projects/tree/main/projects/ai-frontier-intel-station-WenNinghan>
 - 在线网站：<https://64bb5c06830a424fbb1b8c08fc95824e.app.workbuddy.link>
 - 项目状态：持续更新中
 

@@ -1,7 +1,7 @@
 # 发布信息清单
 
 - 作者：WenNinghan（GitHub 用户名）
-- GitHub 项目目录：<https://github.com/AIAADC/student-projects/tree/main/projects/WenNinghan/ai-frontier-intel-station>
+- GitHub 项目目录：<https://github.com/AIAADC/student-projects/tree/main/projects/ai-frontier-intel-station-WenNinghan>
 
 ## 公开入口
 

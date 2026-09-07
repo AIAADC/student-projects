@@ -9,7 +9,7 @@
 - **项目状态**：已验证的可安装发布包
 - **完整项目仓库**：[WenNinghan/daimaobatiao-codex-pet](https://github.com/WenNinghan/daimaobatiao-codex-pet)
 - **完整安装包目录**：[dist/daimaobatiao](https://github.com/WenNinghan/daimaobatiao-codex-pet/tree/main/dist/daimaobatiao)
-- **本目录位置**：`AIAADC/student-projects/projects/WenNinghan/daimaobatiao/`
+- **本目录位置**：`AIAADC/student-projects/projects/daimaobatiao-WenNinghan/`
 
 完整仓库包含源文件、预览图、验证报告、构建脚本和发布说明；本目录提供可直接复制安装的核心文件。
 
