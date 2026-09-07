@@ -12,6 +12,11 @@
 | 📦 开源仓库 | https://github.com/AIMFllyYS/Notebook-MedFreshman | 完整源码、Releases（Electron 桌面端）、Issues |
 | 📁 本目录 | `projects/notebook-medfreshman-AIMFllyYS/` | 项目文档（无源码） |
 
+## ▶️ 交互式演示
+
+- 📺 [打开交互式演示（单文件 HTML）](assets/demo.html)：下载后直接用浏览器打开即可播放，无需任何依赖；演示覆盖「打开笔记 → AI 对话 → Manim 动画 → 交互练习 → 进度保存」完整旅程（约 28 秒，可拖动时间轴、切换章节、手动探索）。
+- 演示为原创模拟界面（无真实数据），仅用于快速了解项目形态；真实功能以线上预览为准。
+
 ## 👋 项目简介
 
 为期末考试复习打造的多学科辅助学习应用。它把课堂录音逐字稿整理成结构化的详尽原创笔记，配合 AI 对话、Manim 数学动画和可交互组件，帮助理解概念与刷题；笔记、动画、交互、划词问答构成一体化的学习体验，并支持安装为 PWA / Electron 桌面应用。
