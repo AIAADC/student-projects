@@ -19,6 +19,13 @@
 [![Pull Requests](https://img.shields.io/badge/PRs-welcome-8250df?style=flat-square)](https://github.com/AIAADC/student-projects/pulls)
 [![AIAADC](https://img.shields.io/badge/AIAADC-student%20community-0969da?style=flat-square)](https://github.com/AIAADC)
 
+## 🗂️ 项目目录
+
+所有项目按“作者-项目名”建立独立目录，方便快速找到作者、项目说明和演示地址：
+
+- [项目总目录](projects/README.md)
+- [WenNinghan · AI 前沿情报站](projects/WenNinghan/ai-frontier-intel-station/)
+
 ---
 
 ## 🌱 为什么要上传？

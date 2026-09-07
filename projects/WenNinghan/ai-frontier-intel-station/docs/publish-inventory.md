@@ -1,9 +1,13 @@
 # 发布信息清单
 
+- 作者：WenNinghan（GitHub 用户名）
+- GitHub 项目目录：<https://github.com/AIAADC/student-projects/tree/main/projects/WenNinghan/ai-frontier-intel-station>
+
 ## 公开入口
 
 - 静态主站：<https://64bb5c06830a424fbb1b8c08fc95824e.app.workbuddy.link>
 - WorkBuddy Page 版：<https://workbuddy.link/p/qepMWks2Grf4KX4mbQfSaT>
+- 在线网站：<https://64bb5c06830a424fbb1b8c08fc95824e.app.workbuddy.link>
 - 在支持 WorkBuddy 在线资料库的环境中，页面会实时读取三张在线表；普通静态环境使用仓库内的快照数据。
 
 ## 仓库内容
