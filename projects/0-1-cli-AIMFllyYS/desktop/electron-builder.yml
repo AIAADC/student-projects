@@ -1,0 +1,26 @@
+appId: com.zeroone.cli.desktop
+productName: 0-1 CLI
+artifactName: ${productName}-${version}-${os}.${ext}
+directories:
+  output: release
+files:
+  - dist/**
+  - package.json
+win:
+  target:
+    - nsis
+    - zip
+mac:
+  target:
+    - dmg
+    - zip
+  category: public.app-category.developer-tools
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+publish:
+  provider: github
+  owner: AIMFllyYS
+  repo: 0-1-CLI
+  releaseType: release

@@ -1,0 +1,1 @@
+export { renderHomeHeader } from './banner';

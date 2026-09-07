@@ -1,0 +1,35 @@
+{
+  "name": "0-1-cli-desktop",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Desktop shell for 0-1 CLI AI workflows",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIMFllyYS/0-1-CLI.git"
+  },
+  "main": "dist/main/main.js",
+  "scripts": {
+    "copy:cli": "node scripts/copy-cli.cjs",
+    "build": "npm run copy:cli && tsc -p tsconfig.json && vite build",
+    "dev": "vite --host 127.0.0.1",
+    "dist:win": "electron-builder --win --publish never",
+    "dist:mac": "electron-builder --mac --publish never"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "highlight.js": "^11.10.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.0.1",
+    "rehype-highlight": "^7.0.0",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "electron": "^39.0.0",
+    "electron-builder": "^26.0.0",
+    "typescript": "^5.3.2",
+    "vite": "^8.0.16"
+  }
+}
