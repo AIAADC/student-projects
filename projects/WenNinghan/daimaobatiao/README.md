@@ -13,6 +13,28 @@
 
 完整仓库包含源文件、预览图、验证报告、构建脚本和发布说明；本目录提供可直接复制安装的核心文件。
 
+## 🐾 效果预览
+
+### 全部动作一览
+
+![呆猫八条动作总览](previews/contact-sheet.png)
+
+### 透明背景检查
+
+![呆猫八条透明背景检查](previews/black-bg-all-frames.png)
+
+### 动画演示
+
+| 待机 | 跑动 | 挥手 |
+| --- | --- | --- |
+| ![待机](previews/animations/idle.gif) | ![跑动](previews/animations/running.gif) | ![挥手](previews/animations/waving.gif) |
+
+| 跳跃 | 等待 | 审阅 |
+| --- | --- | --- |
+| ![跳跃](previews/animations/jumping.gif) | ![等待](previews/animations/waiting.gif) | ![审阅](previews/animations/review.gif) |
+
+更多动作动画可在 [`previews/animations`](previews/animations/) 中查看。
+
 ## 文件
 
 - `pet.json`：宠物配置
