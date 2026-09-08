@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">玄览</string>
+    <string name="tab_home">主页</string>
+    <string name="tab_add">添加</string>
+    <string name="tab_browse">浏览</string>
+    <string name="tab_me">我的</string>
+    <string name="browser_restore_navigation">恢复导航</string>
+    <string name="browser_park_navigation">隐藏到侧边</string>
+    <string name="browser_navigation_parked">导航已贴边</string>
+    <string name="service_title">玄览后台会话</string>
+    <string name="service_empty">没有已启用后台运行的网页应用</string>
+    <string name="service_summary">%1$d 个网页应用已启用后台运行，仍受系统与网站限制</string>
+    <string name="service_channel">后台会话</string>
+    <string name="service_description">展示用户启用的后台网页会话，不保证持续执行</string>
+</resources>

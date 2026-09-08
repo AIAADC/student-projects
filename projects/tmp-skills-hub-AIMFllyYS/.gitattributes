@@ -1,0 +1,12 @@
+# 统一 LF:内容哈希不做换行归一化,跨机器一致性由这里保证
+# (见 docs/conventions/core-patterns.md 第三节)
+* text=auto eol=lf
+
+# 二进制文件不做换行处理
+*.png binary
+*.jpg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 日志导出 TXT 的分享目录（FileProvider） -->
+    <cache-path name="logs" path="logs/" />
+</paths>

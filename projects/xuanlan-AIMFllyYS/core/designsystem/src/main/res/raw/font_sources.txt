@@ -1,0 +1,26 @@
+PocketWebShell uses MiSans and Noto Sans SC.
+
+Noto Sans SC Variable (Simplified Chinese)
+Original unmodified upstream file: Sans/Variable/TTF/Subset/NotoSansSC-VF.ttf
+Upstream: https://github.com/notofonts/noto-cjk
+Font revision: 165c01b46ea533872e002e0785ff17e44f6d97d8
+SHA-256: d68bafcb48a2707749396aa12bbbd833cb70401f3a9a689fd2902c7e0d295964
+Size: 17,773,132 bytes
+License: SIL Open Font License 1.1, bundled in noto_license.txt
+License revision: a99a4354c68964f6bfac488d01010b1fb6d9178a
+Copyright and font naming information are retained in the original font metadata.
+No additional subsetting, conversion or glyph modification is applied by this project.
+
+MiSans
+Existing MiSans Regular / Medium / Semibold resources were retained without modification.
+Copyright Beijing Xiaomi Mobile Software Co., Ltd. 2020-2025.
+Official site and usage conditions: https://hyperos.mi.com/font/en/
+Official FAQ: https://hyperos.mi.com/font/en/faq/
+Official download/license: https://hyperos.mi.com/font/en/download/
+This application specifically acknowledges use of MiSans. MiSans is not distributed
+under PocketWebShell's Apache-2.0 license; its original rights and conditions apply.
+The current cleanup neither changes the font's appearance nor creates derivatives.
+
+System font
+Uses Android's installed system typeface and platform glyph fallback; no system font
+binary is copied or redistributed. Glyph availability may vary across devices.

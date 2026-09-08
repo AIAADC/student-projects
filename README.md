@@ -25,6 +25,11 @@
 
 - [项目总目录](projects/README.md)
 - [AI 前沿情报站 · WenNinghan](projects/ai-frontier-intel-station-WenNinghan/)
+- [玄览 · AIMFllyYS](projects/xuanlan-AIMFllyYS/)
+- [GB-Standard DOCX/PDF 打包 Skill · AIMFllyYS](projects/gb-standard-docx-pdf-AIMFllyYS/)
+- [0-1 CLI · AIMFllyYS](projects/0-1-cli-AIMFllyYS/)
+- [Skill-Hub · AIMFllyYS](projects/tmp-skills-hub-AIMFllyYS/)
+- [期末复习工作站 · AIMFllyYS](projects/notebook-medfreshman-AIMFllyYS/)
 
 ---
 

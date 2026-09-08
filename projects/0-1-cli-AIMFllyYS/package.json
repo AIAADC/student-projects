@@ -1,0 +1,51 @@
+{
+  "name": "coding-cli",
+  "version": "0.7.0",
+  "description": "0-1 CLI - AI CLI onboarding and development toolbox",
+  "main": "src/index.ts",
+  "bin": {
+    "hi": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "node -e \"const fs=require('fs'); if(fs.existsSync('dist')) fs.rmSync('dist',{recursive:true})\"",
+    "rebuild": "npm run clean && npm run build",
+    "test:phase1": "node --test tests/phase1.test.js",
+    "test:paths": "node --test tests/paths.test.js",
+    "test:installers": "node --test tests/installers.test.js",
+    "test:install-registry": "node --test tests/install-registry.test.js",
+    "test:skills": "node --test tests/skills-registry.test.js",
+    "test:ai-config": "node --test tests/ai-config.test.js",
+    "test:onboarding": "node --test tests/onboarding.test.js",
+    "test:resources": "node --test tests/resources.test.js",
+    "desktop:install": "npm install --prefix desktop",
+    "desktop:build": "npm run build && npm run build --prefix desktop",
+    "desktop:dist:win": "npm run desktop:build && npm run dist:win --prefix desktop",
+    "desktop:dist:mac": "npm run desktop:build && npm run dist:mac --prefix desktop",
+    "link": "npm link",
+    "pkg": "pkg dist/index.js --targets node18-win-x64 --output dist/hi.exe"
+  },
+  "keywords": [
+    "cli",
+    "hi",
+    "zero-one",
+    "ai-cli",
+    "github",
+    "kiro",
+    "claude"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "marked": "^4.3.0",
+    "string-width": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.3.2",
+    "@types/node": "^20.10.0",
+    "pkg": "^5.8.1",
+    "typescript": "^5.3.2"
+  }
+}

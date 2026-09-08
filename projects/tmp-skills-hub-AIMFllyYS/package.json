@@ -1,0 +1,28 @@
+{
+  "name": "skills-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "社团内部的 Agent Skill 共享与统一管理中心",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck && pnpm --filter @skills-hub/web run typecheck",
+    "lint": "eslint .",
+    "test": "pnpm -r run test",
+    "dev:web": "pnpm --filter @skills-hub/web dev",
+    "dev:cli": "pnpm --filter @skills-hub/cli dev",
+    "smoke": "node scripts/smoke-panel.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.2.0",
+    "eslint": "^10.8.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0"
+  }
+}
