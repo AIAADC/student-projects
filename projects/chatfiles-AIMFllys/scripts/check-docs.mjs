@@ -1,0 +1,23 @@
+import { chromium } from 'playwright'
+const b = await chromium.launch()
+const errs = []
+const page = await b.newPage()
+page.on('console', m => { if (m.type()==='error') errs.push('intro: '+m.text()) })
+page.on('pageerror', e => errs.push('intro pageerror: '+e.message))
+await page.goto('http://127.0.0.1:3456/docs/introduce.html', {waitUntil:'networkidle'})
+const introTitle = await page.title()
+const hasPrompt = await page.locator('#copyPrompt').count()
+const stat = await page.locator('.stat .n').first().innerText()
+const p2 = await b.newPage()
+const errs2 = []
+p2.on('console', m => { if (m.type()==='error') errs2.push('doc: '+m.text()) })
+p2.on('pageerror', e => errs2.push('doc pageerror: '+e.message))
+await p2.goto('http://127.0.0.1:3456/docs/doc.html?f=/replication/02_SPEC.md', {waitUntil:'networkidle'})
+await p2.waitForTimeout(800)
+const renderedH = await p2.locator('#md h1, #md h2').count()
+const docTitle = await p2.title()
+console.log('intro title:', introTitle)
+console.log('intro stat[0]:', stat, '| copy-prompt btn:', hasPrompt)
+console.log('doc.html title:', docTitle, '| rendered headings in #md:', renderedH)
+console.log('console errors:', [...errs, ...errs2].length ? [...errs,...errs2] : 'NONE')
+await b.close()

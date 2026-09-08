@@ -1,0 +1,222 @@
+:root,
+:root[data-theme='light'] {
+  --bg: #f1f1ef;
+  --bg-2: #fbfbfa;
+  --bg-3: #e8e9e7;
+  --line: #d0d2d0;
+  --line-2: #aeb2b1;
+  --ink: #202326;
+  --ink-soft: #454a4e;
+  --ink-mute: #71777b;
+  --accent: #315d80;
+  --accent-strong: #234864;
+  --accent-contrast: #ffffff;
+  --chromatic-contrast: #ffffff;
+  --brand: #20394e;
+  --brand-contrast: #f7f3ea;
+  --copper: #936943;
+  --success: #4c725f;
+  --warning: #89663e;
+  --danger: #95544f;
+  --violet: #655f76;
+  --surface-material: rgba(244, 244, 241, 0.88);
+  --surface-strong: rgba(251, 251, 250, 0.97);
+  --scrim: rgba(0, 0, 0, 0.34);
+  --shadow: 0 16px 36px -24px rgba(23, 31, 37, 0.32);
+  --shadow-raised: 0 24px 54px -30px rgba(23, 31, 37, 0.4);
+}
+
+:root[data-theme='dark'] {
+  --bg: #111416;
+  --bg-2: #1a1e21;
+  --bg-3: #24292d;
+  --line: #343a3f;
+  --line-2: #50585e;
+  --ink: #f2f1ed;
+  --ink-soft: #ced0ce;
+  --ink-mute: #969c9e;
+  --accent: #8eb2ce;
+  --accent-strong: #b1ccdf;
+  --accent-contrast: #12202b;
+  --chromatic-contrast: #101012;
+  --brand: #d3b38b;
+  --brand-contrast: #17232b;
+  --copper: #c9a277;
+  --success: #83ad96;
+  --warning: #c4a16f;
+  --danger: #d18a83;
+  --violet: #aaa2bd;
+  --surface-material: rgba(26, 30, 33, 0.9);
+  --surface-strong: rgba(26, 30, 33, 0.98);
+  --scrim: rgba(0, 0, 0, 0.54);
+  --shadow: 0 18px 42px -24px rgba(0, 0, 0, 0.72);
+  --shadow-raised: 0 30px 76px -34px rgba(0, 0, 0, 0.88);
+}
+
+:root {
+  --gold: var(--copper);
+  --gold-2: var(--accent-strong);
+  --jade: var(--success);
+  --rust: var(--danger);
+  --accent-04: color-mix(in srgb, var(--accent) 4%, transparent);
+  --accent-03: color-mix(in srgb, var(--accent) 3%, transparent);
+  --accent-05: color-mix(in srgb, var(--accent) 5%, transparent);
+  --accent-07: color-mix(in srgb, var(--accent) 7%, transparent);
+  --accent-08: color-mix(in srgb, var(--accent) 8%, transparent);
+  --accent-10: color-mix(in srgb, var(--accent) 10%, transparent);
+  --accent-12: color-mix(in srgb, var(--accent) 12%, transparent);
+  --accent-14: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-15: color-mix(in srgb, var(--accent) 15%, transparent);
+  --accent-16: color-mix(in srgb, var(--accent) 16%, transparent);
+  --accent-22: color-mix(in srgb, var(--accent) 22%, transparent);
+  --accent-28: color-mix(in srgb, var(--accent) 28%, transparent);
+  --accent-30: color-mix(in srgb, var(--accent) 30%, transparent);
+  --accent-32: color-mix(in srgb, var(--accent) 32%, transparent);
+  --accent-34: color-mix(in srgb, var(--accent) 34%, transparent);
+  --accent-40: color-mix(in srgb, var(--accent) 40%, transparent);
+  --accent-45: color-mix(in srgb, var(--accent) 45%, transparent);
+  --accent-60: color-mix(in srgb, var(--accent) 60%, transparent);
+  --success-06: color-mix(in srgb, var(--success) 6%, transparent);
+  --success-08: color-mix(in srgb, var(--success) 8%, transparent);
+  --success-12: color-mix(in srgb, var(--success) 12%, transparent);
+  --success-16: color-mix(in srgb, var(--success) 16%, transparent);
+  --success-28: color-mix(in srgb, var(--success) 28%, transparent);
+  --success-30: color-mix(in srgb, var(--success) 30%, transparent);
+  --success-35: color-mix(in srgb, var(--success) 35%, transparent);
+  --danger-05: color-mix(in srgb, var(--danger) 5%, transparent);
+  --danger-10: color-mix(in srgb, var(--danger) 10%, transparent);
+  --danger-40: color-mix(in srgb, var(--danger) 40%, transparent);
+  --surface-50: color-mix(in srgb, var(--bg-2) 50%, transparent);
+  --surface-60: color-mix(in srgb, var(--bg-2) 60%, transparent);
+  --surface-74: color-mix(in srgb, var(--bg-2) 74%, transparent);
+  --surface-97: color-mix(in srgb, var(--bg-2) 97%, transparent);
+  --radius: 8px;
+  --radius-lg: 8px;
+  --cjk: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --mono: "SFMono-Regular", "Cascadia Code", Consolas, "PingFang SC", monospace;
+  color: var(--ink);
+  background: var(--bg);
+  font: 15px/1.6 var(--body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+body {
+  color: var(--ink);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  letter-spacing: 0;
+  color: inherit;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--mono);
+}
+
+a {
+  color: inherit;
+}
+
+:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: var(--accent-28);
+  color: var(--ink);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) var(--bg);
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 2px solid var(--bg);
+  border-radius: 999px;
+  background: var(--line-2);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-mute);
+}
+
+@keyframes ms-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    transition: background-color 180ms ease, color 180ms ease;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root[data-theme='light'] {
+    --line: #8e8e93;
+    --line-2: #636366;
+    --ink-mute: #3a3a3c;
+  }
+
+  :root[data-theme='dark'] {
+    --line: #8e8e93;
+    --line-2: #aeaeb2;
+    --ink-mute: #d1d1d6;
+  }
+}

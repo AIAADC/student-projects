@@ -1,0 +1,30 @@
+/*
+ * Normalize read-only decrypted WeChat snapshots into append-only next artifacts.
+ * Existing databases and transcripts are never removed or overwritten.
+ */
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+import { runWeChatParser } from './wechat/parserRunner.js'
+
+const isMainModule = process.argv[1]
+  ? path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))
+  : false
+
+if (isMainModule) {
+  try {
+    const result = runWeChatParser()
+    console.log(
+      `WeChat next parse complete: ${result.conversations} conversations, ${result.messages.toLocaleString()} messages`,
+    )
+    console.log(`  -> ${path.relative(result.paths.root, result.paths.outDbPath)}`)
+    console.log(`  -> ${path.relative(result.paths.root, result.paths.indexPath)}`)
+    console.log(`  -> transcripts in ${path.relative(result.paths.root, result.paths.transcriptDir)}`)
+    if (result.excludedSnapshots.length > 0) {
+      console.log(`  -> excluded strict-subset snapshots: ${result.excludedSnapshots.join(', ')}`)
+    }
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : error)
+    process.exitCode = 1
+  }
+}

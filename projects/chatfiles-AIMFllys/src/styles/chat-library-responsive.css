@@ -1,0 +1,57 @@
+@media (max-width: 1020px) {
+  .chat-library { grid-template-columns: 270px minmax(0, 1fr); }
+  .artifact-controls { align-items: stretch; flex-direction: column; }
+  .artifact-search { width: 100%; }
+}
+
+@media (max-width: 760px) {
+  .chat-library { position: relative; display: block; }
+  .conversation-sidebar,
+  .artifact-workspace { position: absolute; inset: 0; }
+  .chat-library[data-mobile-pane="sidebar"] .artifact-workspace,
+  .chat-library[data-mobile-pane="workspace"] .conversation-sidebar { display: none; }
+  .mobile-back { display: grid; }
+  .sidebar-collapse-button { display: none; }
+  .conversation-sidebar[data-collapsed="true"] .conversation-sidebar-header { padding: 20px 16px 14px; }
+  .conversation-sidebar[data-collapsed="true"] .conversation-sidebar-title-row {
+    justify-content: space-between;
+    margin: 0 2px 13px;
+  }
+  .conversation-sidebar[data-collapsed="true"] .conversation-sidebar-title-row > strong { display: block; }
+  .conversation-sidebar[data-collapsed="true"] .library-search { display: flex; }
+  .conversation-sidebar[data-collapsed="true"] .conversation-scroll { display: block; }
+  .workspace-title-row { gap: 8px; padding-inline: 10px; }
+  .workspace-title-line { display: grid; gap: 3px; }
+  .workspace-title-counts { gap: 5px; font-size: 9px; }
+  .artifact-controls { padding-inline: 12px; }
+  .workspace-title-counts span + span::before { margin-right: 5px; }
+  .artifact-grid-window { left: 12px; right: 12px; }
+  .artifact-dialog-backdrop { padding: 0; }
+  .artifact-dialog { width: 100%; height: 100%; max-height: none; border: 0; border-radius: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-library { transition: none; }
+  .artifact-card:hover { transform: none; }
+  .artifact-dialog,
+  .artifact-dialog-backdrop { animation: none; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .left-rail,
+  .conversation-sidebar,
+  .artifact-workspace-header,
+  .artifact-dialog-backdrop,
+  .artifact-type { backdrop-filter: none; }
+  .left-rail,
+  .conversation-sidebar,
+  .artifact-workspace-header { background: var(--bg-2); }
+  .artifact-type { background: var(--bg); }
+}
+
+@media (prefers-contrast: more) {
+  .conversation-sidebar,
+  .artifact-workspace-header,
+  .artifact-card,
+  .artifact-dialog { border-color: var(--ink-mute); }
+}

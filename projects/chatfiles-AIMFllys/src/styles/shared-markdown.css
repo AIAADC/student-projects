@@ -1,0 +1,95 @@
+/* ---- markdown (dark) ----------------------------------------------------- */
+.markdown-body {
+  color: var(--ink-soft);
+  line-height: 1.78;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: var(--ink);
+  font-family: var(--display);
+}
+
+.markdown-body h2 {
+  margin: 0 0 16px;
+  font-size: 26px;
+}
+
+.markdown-body h3 {
+  margin: 26px 0 8px;
+  font-size: 19px;
+}
+
+.markdown-body p,
+.markdown-body ul,
+.markdown-body li,
+.markdown-body pre {
+  margin-top: 0;
+  overflow-wrap: anywhere;
+}
+
+.markdown-body a {
+  color: var(--gold-2);
+  text-underline-offset: 3px;
+}
+
+.markdown-body strong {
+  color: var(--ink);
+}
+
+.markdown-body blockquote {
+  margin: 14px 0;
+  padding: 8px 16px;
+  border-left: 3px solid var(--gold);
+  color: var(--ink-mute);
+}
+
+.markdown-body code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--gold-2);
+  font-size: 0.9em;
+}
+
+.markdown-body pre {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow-x: auto;
+}
+.markdown-body pre code {
+  padding: 0;
+  background: transparent;
+  color: var(--ink-soft);
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid var(--line);
+  padding: 7px 10px;
+  vertical-align: top;
+  font-size: 13px;
+}
+
+.markdown-body th {
+  background: var(--bg-3);
+  color: var(--ink);
+  text-align: left;
+}
+
+.markdown-body td {
+  background: var(--bg-2);
+}

@@ -1,0 +1,153 @@
+.media-review-sidebar {
+  padding: 12px;
+}
+
+.media-note {
+  margin: 12px 2px 0;
+  color: var(--ink-mute);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.media-grid-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.media-grid-panel > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface-60);
+}
+
+.media-grid-panel h2 {
+  font-family: var(--display);
+  font-size: 24px;
+}
+
+.media-grid-panel header span {
+  color: var(--ink-mute);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* scroll container only — sized to the full virtual height; the mounted window
+   is an absolutely-positioned grid translated to its real row (see
+   useGridVirtualizer + MediaReview). column count is set inline. */
+.media-grid {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+
+.media-sizer {
+  position: relative;
+  width: 100%;
+}
+
+.media-window {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  right: 14px;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  will-change: transform;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 248px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-3);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.media-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-32);
+  box-shadow: var(--shadow);
+}
+
+.media-thumb {
+  position: relative;
+  flex: 0 0 150px;
+  width: 100%;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background: var(--bg);
+  color: var(--gold);
+  overflow: hidden;
+}
+
+.media-play {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--surface-74);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  padding-left: 2px;
+  backdrop-filter: blur(2px);
+}
+
+.media-thumb img,
+.media-thumb video {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  object-fit: contain;
+  display: block;
+}
+
+.media-card strong,
+.media-card span,
+.media-card em {
+  display: block;
+  margin: 0 10px;
+}
+
+.media-card strong {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.media-card span,
+.media-card em {
+  color: var(--ink-mute);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.media-card em {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,112 @@
+/* ========================================================================= */
+/*  ACADEMICS                                                                 */
+/* ========================================================================= */
+.aca {
+  padding: 14px 6px 30px;
+}
+.aca-hero {
+  max-width: 700px;
+  margin: 18px 0 30px;
+}
+.aca-title {
+  font-family: var(--display);
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.aca-sub {
+  margin: 16px 0 0;
+  max-width: 560px;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+  line-height: 1.8;
+}
+.aca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 38px;
+}
+.aca-course {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  padding: 24px;
+  border: 1px solid var(--accent-34);
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.aca-course:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.aca-course-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  color: var(--accent-contrast);
+  background: var(--accent);
+}
+.aca-course h3 {
+  font-family: var(--display);
+  font-size: 22px;
+  margin: 2px 0 10px;
+}
+.aca-course-body {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.aca-course-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 16px;
+  color: var(--gold-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+.aca-know {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+}
+.aca-know h3 {
+  font-family: var(--display);
+  font-size: 20px;
+  margin: 2px 0 10px;
+}
+.aca-know-body {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.aca-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+.aca-tags span {
+  padding: 3px 9px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  color: var(--ink-mute);
+  font-size: 11.5px;
+}
+.aca-nuggets {
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .aca-title { font-size: 40px; }
+}

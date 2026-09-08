@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2023"],
+    "types": ["node"]
+  },
+  "include": [
+    "server/**/*.ts",
+    "scripts/localEnv.ts",
+    "shared/**/*.ts"
+  ],
+  "exclude": ["server/**/*.test.ts", "shared/**/*.test.ts"]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>文档 · 午夜书斋 ChatFiles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Hanken+Grotesk:wght@300..800&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#14110d;--bg-2:#1b1712;--bg-3:#221d17;--line:#2e271f;--line-2:#3a3127;
+    --ink:#ece3d4;--ink-soft:#b7ab97;--ink-mute:#8a7e6c;--gold:#d8a24a;--gold-2:#e9c079;--jade:#79a99a;--rust:#c0653a;
+    --serif:"Fraunces",Georgia,serif;--sans:"Hanken Grotesk","PingFang SC","Microsoft YaHei",system-ui,sans-serif;--mono:"JetBrains Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75;
+    background-image:radial-gradient(1000px 500px at 90% -10%,rgba(216,162,74,.08),transparent 60%);background-attachment:fixed}
+  ::selection{background:rgba(216,162,74,.28);color:#fff}
+  ::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:8px;border:3px solid var(--bg)}
+  .top{position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);background:rgba(20,17,13,.86);border-bottom:1px solid var(--line)}
+  .top .in{max-width:880px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between}
+  .top a{color:var(--gold-2);text-decoration:none;font-size:14px}
+  .top .b{font-family:var(--serif);font-weight:700}
+  main{max-width:880px;margin:0 auto;padding:40px 28px 100px}
+  .md h1,.md h2,.md h3,.md h4{font-family:var(--serif);font-weight:600;line-height:1.25;margin:1.6em 0 .6em}
+  .md h1{font-size:2.1em;background:linear-gradient(110deg,#fff,var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:.2em}
+  .md h2{font-size:1.5em;border-bottom:1px solid var(--line);padding-bottom:.3em}
+  .md h3{font-size:1.2em;color:var(--gold-2)}
+  .md a{color:var(--gold-2)}
+  .md code{font-family:var(--mono);font-size:.88em;background:var(--bg-3);border:1px solid var(--line);border-radius:5px;padding:.1em .42em;color:var(--jade)}
+  .md pre{background:#0f0d0a;border:1px solid var(--line-2);border-radius:10px;padding:16px 18px;overflow:auto;box-shadow:0 18px 40px -22px rgba(0,0,0,.7)}
+  .md pre code{background:none;border:none;padding:0;color:#e7dcc8;font-size:13px;line-height:1.6}
+  .md blockquote{border-left:3px solid var(--gold);margin:1em 0;padding:.3em 1em;color:var(--ink-soft);background:linear-gradient(90deg,rgba(216,162,74,.06),transparent)}
+  .md table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:.92em}
+  .md th,.md td{border:1px solid var(--line);padding:8px 12px;text-align:left}
+  .md th{background:var(--bg-3);font-family:var(--mono);font-size:.85em;letter-spacing:.04em}
+  .md tr:nth-child(even){background:rgba(255,255,255,.015)}
+  .md ul,.md ol{padding-left:1.4em}.md li{margin:.3em 0}
+  .md hr{border:none;border-top:1px solid var(--line);margin:2em 0}
+  .md strong{color:#fff}
+  .err{color:var(--rust);font-family:var(--mono)}
+</style>
+</head>
+<body>
+<div class="top"><div class="in"><span class="b">午夜书斋 · 文档</span><a href="/docs/introduce.html">← 返回介绍</a></div></div>
+<main><article class="md" id="md"><p style="color:var(--ink-mute)">加载中…</p></article></main>
+<script src="/docs/vendor/marked.min.js"></script>
+<script>
+  var params = new URLSearchParams(location.search);
+  var f = params.get('f') || '/replication/README.md';
+  // only allow same-origin doc paths under /replication or /docs (Chinese folder names allowed)
+  if(!/^\/(replication|docs)\/[\w./一-鿿-]+\.md$/.test(f)){ f='/replication/README.md'; }
+  fetch(f).then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function(t){
+      var title = (t.match(/^#\s+(.+)$/m)||[])[1];
+      if(title) document.title = title + ' · 午夜书斋';
+      document.getElementById('md').innerHTML = marked.parse(t, {breaks:false, gfm:true});
+    })
+    .catch(function(e){ document.getElementById('md').innerHTML = '<p class="err">无法加载文档：'+f+'（'+e.message+'）</p>'; });
+</script>
+</body>
+</html>

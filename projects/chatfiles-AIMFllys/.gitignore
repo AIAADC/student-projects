@@ -1,0 +1,111 @@
+# ==============================================================================
+# ChatFiles .gitignore — 严格隐私保护
+# 仓库只保留：代码框架 + replication 文档 + 配置文件
+# 任何含有个人聊天/文件/数据的目录一律排除
+# ==============================================================================
+
+# ===== 个人数据（绝对不可泄露） =====
+/data/
+archive/
+work/
+imports/
+secrets/
+.uploads/
+docs/tmp/
+
+# ===== 本机解密 / 私有导出辅助文件 =====
+image_key.json
+scripts/exportIP*.mjs
+scripts/batch_*_insights_data.json
+scripts/missing*_overrides.json
+scripts/tmp/
+scripts/_test_*.png
+
+# ===== 一次性洞察批处理 / 恢复脚本（本机审计留档，不入仓） =====
+scripts/_checkGrownRecovery.mjs
+scripts/aggregateInsightsByCategory.ts
+scripts/bootstrapInsightState.ts
+scripts/checkBatch3.mjs
+scripts/checkBatch3Quality.mjs
+scripts/computeUpdateDelta.ts
+scripts/countBatch3.mjs
+scripts/extractBatch3Remaining.mjs
+scripts/find_image_key.py
+scripts/find_image_key2.py
+scripts/generateBatch1Insights.mjs
+scripts/generateBatch8Insights.mjs
+scripts/generateMissing282_499.mjs
+scripts/mergeInsightDelta.ts
+scripts/processBatch6.mjs
+scripts/processDeltaInsights.mjs
+scripts/processMissing282.mjs
+scripts/recoverConvFiles.mjs
+scripts/runBatch4Insights.mjs
+scripts/summarizePendingBatch3.mjs
+scripts/updateInsightState.ts
+scripts/validateBatch8.mjs
+scripts/validateDeltaInsights.mjs
+scripts/verifyBatch4.mjs
+scripts/writeBatch1Insights.mjs
+scripts/writeBatch3Insights.mjs
+scripts/writeBatch5Insights.ts
+scripts/writeBatch6Insights.mjs
+scripts/writeBatch7Insights.mjs
+scripts/writeBatch8Insights.mjs
+
+# ===== 构建产物 =====
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# ===== 日志 =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== 编辑器 & 系统 =====
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ===== Agent / AI 状态 =====
+.claude/
+.cursor/
+.playwright-cli/
+.worktrees/
+
+# ===== 遗留文件 =====
+README_CHATFILES.md
+
+# ===== 杂项 =====
+*.tsbuildinfo
+*.zip
+*.exe
+*.db
+*.db-shm
+*.db-wal
+
+# ===== 密钥 / 环境变量（绝不入仓） =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.keystore
+secrets.*
+
+# ===== 个人身份覆盖（本机注入，见 .env.example） =====
+# VITE_OWNER_WXID / VITE_OWNER_NAME / WECHAT_STORE / QQ_NUMBER 写在 .env.local
