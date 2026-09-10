@@ -13,7 +13,7 @@
 | AIMFllyYS | [0-1 CLI](0-1-cli-AIMFllyYS/) | [项目 README](0-1-cli-AIMFllyYS/README.md) | — |
 | AIMFllyYS | [Skill-Hub](tmp-skills-hub-AIMFllyYS/) | [项目 README](tmp-skills-hub-AIMFllyYS/README.md) | — |
 | AIMFllyYS | [期末复习工作站](notebook-medfreshman-AIMFllyYS/) | [项目 README](notebook-medfreshman-AIMFllyYS/README.md) | [在线网站](https://notebook2a.husteread.icu) |
-| 999dy999-create | [数据结构与计算机网络可视化学习实验室](visual-learning-lab-999dy999-create/) | [完整项目仓库](https://github.com/999dy999-create/visual-learning-lab) | — |
+| 999dy999-create | [数据结构与计算机网络可视化学习实验室](visual-learning-lab-999dy999-create/) | [完整可运行包](https://github.com/999dy999-create/visual-learning-lab/releases/tag/full-package-v1.0.0) | — |
 
 ## 如何添加项目
 
