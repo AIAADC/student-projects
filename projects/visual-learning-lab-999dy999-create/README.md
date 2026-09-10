@@ -2,9 +2,12 @@
 
 一个用于学习数据结构和计算机网络的交互式可视化网页项目。
 
-## 项目源码
+## 完整可运行包
 
-- 完整项目仓库：[999dy999-create/visual-learning-lab](https://github.com/999dy999-create/visual-learning-lab)
+- [下载页面](https://github.com/999dy999-create/visual-learning-lab/releases/tag/full-package-v1.0.0)
+- [直接下载 ZIP](https://github.com/999dy999-create/visual-learning-lab/releases/download/full-package-v1.0.0/data-structures-network-full-package.zip)
+- 文件大小：270,254,753 字节（约 257.74 MiB）
+- SHA-256：`8D07B7AA5D7200E606E6BBC7BB37262CAA31FC732B92DBA9DFAB263C572E6DA7`
 
 ## 主要功能
 
@@ -21,15 +24,7 @@
 
 ## 如何运行
 
-需要 Node.js 18 或更高版本：
-
-```bash
-git clone https://github.com/999dy999-create/visual-learning-lab.git
-cd visual-learning-lab
-npm start
-```
-
-然后访问 `http://127.0.0.1:4173/`。
+从上面的 Release 下载完整 ZIP，解压后按照包内说明启动。压缩包包含运行所需的 PPT 课件和便携 Node.js 环境。
 
 ## 作者
 
