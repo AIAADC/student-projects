@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="collision_avoidance" type="collision_avoidance" name="" output="screen">
+    <rosparam command="load" file="$(find collision_avoidance)/config/collision_avoidance.yaml" />
+  </node>
+</launch>
