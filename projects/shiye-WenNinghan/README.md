@@ -4,7 +4,7 @@
 
 **作者 / 维护者：[WenNinghan](https://github.com/WenNinghan)** · AIAADC 学生项目
 
-**[完整源码与详细教程](https://github.com/WenNinghan/shiye) · [问题反馈](https://github.com/WenNinghan/shiye/issues) · [公式使用指南](https://github.com/WenNinghan/shiye/blob/main/docs/formula-guide.md) · [发布状态](https://github.com/WenNinghan/shiye/blob/main/docs/release-status.md)**
+**[下载 Windows 离线版](https://github.com/WenNinghan/shiye/releases/tag/v0.3.1) · [完整源码与详细教程](https://github.com/WenNinghan/shiye) · [问题反馈](https://github.com/WenNinghan/shiye/issues) · [公式使用指南](https://github.com/WenNinghan/shiye/blob/main/docs/formula-guide.md)**
 
 ![识页首页](assets/home.png)
 
@@ -32,7 +32,7 @@
 | --- | --- |
 | 源码 | 已公开到 [WenNinghan/shiye](https://github.com/WenNinghan/shiye) |
 | 本机浏览器版 | 可按下面步骤运行，普通 OCR 不需要 API 密钥 |
-| Windows 桌面 v0.3 | 独立运行时、模型包导入和可选自带 API 已完成本机内测；安装包未签名且暂不公开分发 |
+| Windows 桌面 v0.3.1 | [完整离线预发布版](https://github.com/WenNinghan/shiye/releases/tag/v0.3.1)：安装器约 202 MB、可选公式包约 847 MB；未签名，无需自行配置环境 |
 | 在线体验网站 | **暂无**；localhost / 127.0.0.1 不是线上网站 |
 | 手机端 | 下一阶段规划中，当前没有 APK / iOS 安装包 |
 
@@ -40,12 +40,17 @@
 
 ## 新同学如何开始
 
-1. 打开 [个人主仓库](https://github.com/WenNinghan/shiye)，点击 **Code → Download ZIP**，完整解压。也可使用下方 Git 命令。
-2. 安装 **Python 3.12（或 uv）与 Node.js 22.12+ / 24**。
-3. 双击源码根目录的 `启动识页.cmd`。首次安装依赖需要网络和磁盘空间。
-4. 在自己的电脑打开 `http://127.0.0.1:8765`，点「用示例体验一下」，先用不含隐私的合成样例熟悉流程。
-5. 选择材料，开始识别，对照原图校对，然后生成并下载文件。
-6. 看论文 / 教材的同学，再按 [公式指南](https://github.com/WenNinghan/shiye/blob/main/docs/formula-guide.md) 安装可选公式环境。
+1. 打开 [Release 下载页](https://github.com/WenNinghan/shiye/releases/tag/v0.3.1)，下载 `Shiye-0.3.1-Windows-x64.exe` 并按向导安装。不需要另装 Python、Node 或 Office。
+2. 看论文 / 教材的同学再下载 `.shiye-model`，在“识别设置 → 导入公式离线包”中选择文件和保存盘，成功后重启应用。建议模型盘预留至少 3 GB。
+3. 先点“用示例体验一下”，或导入自己的图片/PDF；开始识别，对照原图校对，再生成并下载 Word / Markdown / PDF。
+4. 下载和导入完成后，本机识别无需联网，也不依赖作者电脑开机；自己的 API 是可选项。
+5. 核对 Release 中的 `SHA256SUMS.txt`。这是未签名测试版，不要关闭系统安全防护；[详细安装说明](https://github.com/WenNinghan/shiye/blob/v0.3.1/docs/desktop-guide.md)。
+
+其余 Sources / Dependencies / Notices 归档是开发与许可材料，普通用户不用全部下载。
+
+### 想改代码的同学
+
+安装 Python 3.12（或 uv）与 Node.js 22.12+ / 24，然后按以下方式获取源码：
 
 ```powershell
 git clone https://github.com/WenNinghan/shiye.git
@@ -55,7 +60,7 @@ cd shiye
 ./scripts/install-formula.ps1
 ```
 
-源码浏览器版运行时需保持自己的服务终端开启。已实现的桌面版用于免配环境体验，但其公开安装包需要先完成发布条件，当前不要到不明来源下载同名安装器。
+源码浏览器版运行时需保持自己的服务终端开启；上面的安装版不需要命令行终端。只从主仓库 Release 下载，不要使用不明来源的同名安装器。
 
 ## 技术与隐私
 
@@ -67,13 +72,13 @@ React / TypeScript / Vite · FastAPI / SQLite · RapidOCR / ONNX Runtime · Padd
 
 ## 诚实说说限制
 
-本机记录有 44 项后端、4 项桌面安全与 2 项最终桌面流程测试通过，但不是“所有材料识别准确”的证明。逆矩阵曾把 `a` 识别为 `d`；公式、姓名、日期和数字必须人工校对。复杂多栏、无框线表格、手写和模糊页面仍有限制。
+0.3.1 本机记录有 44 项后端、15 项打包材料、4 项桌面安全与 2 项最终桌面流程测试通过，新公式包已实际导入并完成公式/Word 导出，但不是“所有材料识别准确”的证明。逆矩阵曾把 `a` 识别为 `d`；公式、姓名、日期和数字必须人工校对。复杂多栏、无框线表格、手写和模糊页面仍有限制。
 
-真实第三方 API、另一台干净 Windows 机器、完整依赖/权重再分发许可仍待核对。详情见 [验收记录](https://github.com/WenNinghan/shiye/blob/main/docs/desktop-acceptance.md)。
+尚未在另一台干净 Windows 电脑或操作系统全局断网环境测试，未验证全部真实 API 服务商。原始许可及对应源码材料随 Release 提供；详情见 [最终包验收](https://github.com/WenNinghan/shiye/blob/v0.3.1/docs/release-acceptance-0.3.1.md)。
 
 ## 后续计划与参与
 
-- 完善桌面公开发布：许可清单、干净机验证和真实 API 测试。
+- 收集预发布反馈，继续干净机兼容性和真实 API 测试。
 - 确定并实现手机端路线。
 - 用经过授权的真实样例改进版面、表格与公式识别。
 - 欢迎提交脱敏失败样例、体验建议、文档和修复；见 [贡献指南](https://github.com/WenNinghan/shiye/blob/main/CONTRIBUTING.md)。
