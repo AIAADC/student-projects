@@ -21,9 +21,10 @@
 
 ## 🗂️ 项目目录
 
-所有项目按“作者-项目名”建立独立目录，方便快速找到作者、项目说明和演示地址：
+所有项目按“项目名-作者名”建立独立目录，方便快速找到作者、项目说明和演示地址：
 
 - [项目总目录](projects/README.md)
+- [识页 Shiye · WenNinghan](projects/shiye-WenNinghan/)
 - [AI 前沿情报站 · WenNinghan](projects/ai-frontier-intel-station-WenNinghan/)
 - [玄览 · AIMFllyYS](projects/xuanlan-AIMFllyYS/)
 - [GB-Standard DOCX/PDF 打包 Skill · AIMFllyYS](projects/gb-standard-docx-pdf-AIMFllyYS/)
