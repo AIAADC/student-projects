@@ -80,6 +80,8 @@ React / TypeScript / Vite · FastAPI / SQLite · RapidOCR / ONNX Runtime · Padd
 
 ## 许可证与备注
 
-项目整体许可证尚未确定，没有默认采用资料库统一许可证，也没有擅自标为 MIT。复用、修改或再分发前请与作者确认。第三方组件各有许可，尤其 PDF 引擎及模型权重需单独核对；见 [第三方来源与发布边界](https://github.com/WenNinghan/shiye/blob/main/THIRD_PARTY_NOTICES.md)。
+项目自有源码及随附文档采用 **MIT License**，版权署名为 **Copyright (c) 2026 WenNinghan**。见 [本项目 LICENSE](LICENSE) 与 [主仓库 LICENSE](https://github.com/WenNinghan/shiye/blob/main/LICENSE)。本目录的授权不改变资料库内其他同学项目的许可证。
+
+第三方依赖、模型和字体仍遵循各自许可；尤其 PyMuPDF / MuPDF 的 AGPL / 商业双许可不会因本项目采用 MIT 而消失。完整安装包及服务的分发、部署仍需核对相关义务，详见 [第三方来源与发布边界](https://github.com/WenNinghan/shiye/blob/main/THIRD_PARTY_NOTICES.md)。
 
 署名使用作者公开 GitHub 用户名 WenNinghan；不代填真实姓名、联系方式或学校信息。截图来自合成样例与界面演示，不含真实学生材料。
